@@ -1,0 +1,9 @@
+---
+# Crate a virtual machine from a template
+
+DC_NAME: krm
+ESXI_NAME: 172.27.103.111
+
+VM_TEMPLATE: template-UbuS24-1
+SUBNET_MASK: 255.255.255.0
+GATEWAY: 192.168.175.1

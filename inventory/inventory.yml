@@ -1,0 +1,43 @@
+---
+
+init_hosts:
+  hosts:
+    host1:
+    host2:
+
+v2ray:
+  hosts:
+    192.168.56.151:
+
+template:
+  hosts:
+    template_tala:
+    test-server1:
+    Zaraamad-UbuS24-Prod1-174.14:
+      VM_FOLDER: zaraavand
+      ESXI_NAME: 172.27.103.105
+      DISK_SIZE: 80
+      DATASTORE_NAME: SAS1TB-1
+      MEMORY_SIZE: 8192
+      CPU_SIZE: 6
+      NETWORK_NAME: Pfsense
+      IPADDRESS: 192.168.174.14
+      DNS_SERVER1: 8.8.8.8
+      DNS_SERVER2: 4.2.2.4
+shadowsocks:
+  hosts:
+    example1:
+
+web_databases:
+  hosts:
+    db1.demo.local:
+    db2.demo.local:
+      ansible_user: user
+      ansible_port: 22
+
+zar:
+  hosts:
+    gitlab.zaraamad:
+#    nexus.zaraamad:
+    stage.zaraamad:
+    prod.zaraamad:

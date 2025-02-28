@@ -1,0 +1,17 @@
+---
+- name: Install Wazuh agent from local deb file
+  apt:
+    deb: wazuh-agent_4.9.0-1_amd64.deb
+  register: wazuh_agent_installed
+
+- name: Configur wazuh agent
+  template:
+    src: ossec.conf.j2
+    dest: /var/ossec/etc/ossec.conf
+  notify: Restart Wazuh Agent
+
+- name: Enable and start Wazuh agent
+  service:
+    name: wazuh-agent
+    state: started
+    enabled: true
